@@ -368,6 +368,12 @@ template {
   src: url("../assets/fonts/nunito-sans-v12-latin-800.woff2") format("woff2"), url("../assets/fonts/nunito-sans-v12-latin-800.woff") format("woff");
 }
 /* GENERAL */
+:root {
+  --header-bg-color: #fff;
+  --main-text-color: #111517;
+  --main-bg-color: #fafafa;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -388,12 +394,20 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Nunito Sans", "Arial", sans-serif;
-  background-color: #fff;
+  font-weight: 300;
+  background-color: var(--main-bg-color);
+  transition: 0.5s ease;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.theme-dark {
+  --header-bg-color: #2b3844;
+  --main-bg-color: #202c36;
+  --main-text-color: #fff;
 }
 
 /* VISUALLY-HIDDEN */
@@ -411,9 +425,51 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
   padding-right: 20px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* HEADER STYLES START */
+.site-header {
+  padding: 23px 0;
+  background-color: var(--header-bg-color);
+  transition: 0.5s ease;
+}
+.site-header__logo {
+  width: 230px;
+  height: 33px;
+  color: var(--main-text-color);
+  transition: 0.5s ease;
+}
+.site-header__btn {
+  padding-left: 30px;
+  background-image: url("../../assets/icons/light-mode-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--main-text-color);
+  transition: 0.5s ease;
+}
+.site-header__dark-btn {
+  background-image: url("../../assets/icons/dark-mode-icon.svg");
+}
+
+@media only screen and (max-width: 375px) {
+  .site-header {
+    padding: 30px 0;
+  }
+  .site-header__logo {
+    width: 135px;
+    height: 20px;
+  }
+  .site-header__btn {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+/* HEADER STYLES END *//*# sourceMappingURL=main.css.map */

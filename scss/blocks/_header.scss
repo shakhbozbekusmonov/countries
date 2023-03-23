@@ -1,0 +1,47 @@
+/* HEADER STYLES START */
+.site-header {
+    padding: 23px 0;
+    background-color: var(--header-bg-color);
+    transition: 0.5s ease;
+
+    &__logo {
+        width: 230px;
+        height: 33px;
+        color: var(--main-text-color);
+        transition: 0.5s ease;
+    }
+
+    &__btn {
+        padding-left: 30px;
+        background-image: url("../../assets/icons/light-mode-icon.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--main-text-color);
+        transition: 0.5s ease;
+    }
+
+    &__dark-btn {
+        background-image: url("../../assets/icons/dark-mode-icon.svg");
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .site-header {
+        padding: 30px 0;
+
+        &__logo {
+            width: 135px;
+            height: 20px;
+        }
+
+        &__btn {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+/* HEADER STYLES END */
