@@ -1,0 +1,43 @@
+.header {
+    background-color: var(--backgroundPrimary);
+    padding: 23px 0;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        color: var(--colorPrimary);
+
+        &:hover {
+            color: var(--colorPrimary);
+        }
+
+        @media only screen and (max-width: 768px) {
+            svg {
+                width: 135px;
+            }
+        }
+    }
+
+    &__mode-btn {
+        background-color: transparent;
+        border: none;
+        padding-left: 25px;
+        background-image: url("../assets/img/moon-light.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        color: var(--colorPrimary);
+
+        @media only screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.theme-dark .header__mode-btn {
+    background-image: url("../assets/img/moon-dark.svg");
+}
